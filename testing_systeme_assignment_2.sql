@@ -187,9 +187,9 @@ VALUES 				('Câu hỏi về Java' , 1 ,			'1' , 					'1' ,			'2020-04-05'),
 INSERT INTO Answer ( Content , 		QuestionID , isCorrect )
 VALUES 				('Trả lời 01' ,		 1 ,			 0),
 					('Trả lời 02' , 	1 ,				 1),
-					('Trả lời 03',	 	1 , 			0 ),
+					('Trả lời 03',	 	1 , 		0 ),
 					('Trả lời 04',	 	1 ,				 1 ),
-					('Trả lời 05',	 	2 , 			1 ),
+					('Trả lời 05',	 	2 , 		1 ),
 					('Trả lời 06', 		3 ,				 1 ),
 					('Trả lời 07', 		4 , 			0 );
 
