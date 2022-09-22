@@ -1,2 +1,2 @@
 # testingsysteam
-bài tập về nhà
+毎日に頑張っています。
