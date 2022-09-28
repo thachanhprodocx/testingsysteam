@@ -10,7 +10,7 @@ CREATE VIEW `danh_sach_nhan_vien` AS
     where
         d.DepartmentID = a.DepartmentID
             and d.DepartmentName = 'Sale');
--- Tạo view có chứa thông tin các account tham gia vào nhiều group nhất
+-- câu2 Tạo view có chứa thông tin các account tham gia vào nhiều group nhất
 -- cách 1 cte
 DROP VIEW IF EXISTS `the number of groups the employee joins`;
 CREATE VIEW `the number of groups the employee joins` as (
