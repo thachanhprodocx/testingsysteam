@@ -19,6 +19,7 @@ CREATE TABLE `Account` (
     FullName 						VARCHAR(255) NOT NULL,
     DepartmentID 					TINYINT NOT NULL,
     PositionID 						TINYINT NOT NULL,
+    Gender							ENUM ('Nam','Nữ','Chưa xác định'),
     CreateDate 						DATE,
     FOREIGN KEY (DepartmentID)
         REFERENCES Department (DepartmentID),
@@ -120,27 +121,27 @@ VALUES 							('Dev' ),
 								('Scrum Master'),
 								('PM' );
 
-INSERT INTO `Account`(Email ,		 Username,			 FullName ,				 DepartmentID , PositionID,			CreateDate)
-VALUES (	'Email1@gmail.com' ,'mariaozawa' ,'			mariaozawa' , 				'5' ,			 '1',			'2020-03-05'),
+INSERT INTO `Account` (Email ,		 Username,			 FullName ,				 DepartmentID , 		PositionID,		Gender		,	CreateDate)
+VALUES (	'Email1@gmail.com' ,'mariaozawa' ,'			mariaozawa' , 				'5' ,				 '1',			'NAM'		,	'2020-03-05'),
 
-			('Email2@gmail.com' ,'Username2' ,			'Seiko Matsuda' ,			 '1' , 			'2',		'2020-03-05'),
+			('Email2@gmail.com' ,'Username2' ,			'Seiko Matsuda' ,			 '1' , 				'2',			'Nam'		,	'2020-03-05'),
 
-			('ngoanh3@gmail.com' , 'Username3' ,		'Akina Nakamori', 			'2' , 			'2' ,		'2020-03-07'),
+			('ngoanh3@gmail.com' , 'Username3' ,		'Akina Nakamori', 			'2' , 				'2' ,		'Nữ'			,	'2020-03-07'),
 
-			('ngoanh4@gmail.com' , 'Username4' ,		'Momoe Yamaguchi', 			'3' ,			 '4' ,		'2020-03-08'),
+			('ngoanh4@gmail.com' , 'Username4' ,		'Momoe Yamaguchi', 			'3' ,				 '4' ,			'Chưa xác định'		,	'2020-03-08'),
 
-			('ngoanh5@gmail.com' , 'Username5' ,		'Kenji Sawada',				 '4' , 			'4' ,		'2020-03-10'),
+			('ngoanh5@gmail.com' , 'Username5' ,		'Kenji Sawada',				 '4' , 				'4' ,				'Nữ'	,	'2020-03-10'),
 
-			('ngoanh6@gmail.com' , 'Username6' ,		'Shizuka Kudo', 			'6' , 			'3' ,		'2020-04-05'),
+			('ngoanh6@gmail.com' , 'Username6' ,		'Shizuka Kudo', 			'6' , 				'3' ,					'Nam',	'2020-04-05'),
 
-			('ngoanh7@gmail.com' , 'Username7' ,		'Hideki Saijo',				 '2' , 			'2' ,		'2020-12-3' );
+			('ngoanh7@gmail.com' , 'Username7' ,		'Hideki Saijo',				 '2' , 			'2' ,				'Nam'				,	'2020-12-3' );
 INSERT INTO `Group` ( GroupName , 	CreatorID , CreateDate)
-VALUES 				('Testing System' , 5,	'	2019-03-05'),
+VALUES 				('Testing System' , 1,	'	2019-03-05'),
 
 					('Development' , 	1,		'2020-03-07'),
 					('Sale 01' , 		2 ,		'2020-03-09'),
 					('Sale 02' , 		3 ,		'2020-03-10'),
-					('Sale 03' , 		4 ,		'2020-03-28'),
+					('Sale 03' , 		1 ,		'2020-03-28'),
 					('Creator' , 		6 ,		'2020-04-06'),
 					('Marketing 01' , 	7 ,		'2020-04-07');
 INSERT INTO `GroupAccount` ( GroupID , AccountID , 		JoinDate )
@@ -187,9 +188,9 @@ VALUES 				('Câu hỏi về Java' , 1 ,			'1' , 					'1' ,			'2020-04-05'),
 INSERT INTO Answer ( Content , 		QuestionID , isCorrect )
 VALUES 				('Trả lời 01' ,		 1 ,			 0),
 					('Trả lời 02' , 	1 ,				 1),
-					('Trả lời 03',	 	1 , 		0 ),
+					('Trả lời 03',	 	1 , 			0 ),
 					('Trả lời 04',	 	1 ,				 1 ),
-					('Trả lời 05',	 	2 , 		1 ),
+					('Trả lời 05',	 	2 , 			1 ),
 					('Trả lời 06', 		3 ,				 1 ),
 					('Trả lời 07', 		4 , 			0 );
 
@@ -203,7 +204,7 @@ VALUES			 ('VTIQ001' , 			'Đề thi C#' 		,1 , 				60 ,			 '5' ,			'2019-04-05'
 				('VTIQ007' , 			'Đề thi SQL' , 		2 ,					60 , 			'7' ,			'2020-04-05');
 
 INSERT INTO ExamQuestion(ExamID , QuestionID )
-VALUES 						( 1 ,	 5 ),
+VALUES 						( 1 ,	 2 ),
 							( 2 ,	 3 ),
 							( 3 ,	 4 ),
 							( 4 ,	 1 ),
